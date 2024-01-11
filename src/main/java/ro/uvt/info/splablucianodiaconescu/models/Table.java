@@ -1,6 +1,9 @@
 package ro.uvt.info.splablucianodiaconescu.models;
 
-public class Table implements Element{
+import ro.uvt.info.splablucianodiaconescu.services.Visitee;
+import ro.uvt.info.splablucianodiaconescu.services.Visitor;
+
+public class Table implements Element, Visitee {
     private String title;
 
     public Table(String title) {
@@ -13,6 +16,11 @@ public class Table implements Element{
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitTable(this);
     }
 
     @Override

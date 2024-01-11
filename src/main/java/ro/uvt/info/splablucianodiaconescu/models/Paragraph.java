@@ -2,8 +2,10 @@ package ro.uvt.info.splablucianodiaconescu.models;
 
 import ro.uvt.info.splablucianodiaconescu.services.AlignLeft;
 import ro.uvt.info.splablucianodiaconescu.services.AlignStrategy;
+import ro.uvt.info.splablucianodiaconescu.services.Visitee;
+import ro.uvt.info.splablucianodiaconescu.services.Visitor;
 
-public class Paragraph implements Element {
+public class Paragraph implements Element, Visitee {
     private String text;
     private AlignStrategy alignStrategy;
 
@@ -26,6 +28,11 @@ public class Paragraph implements Element {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitParagraph(this);
     }
 
     @Override
