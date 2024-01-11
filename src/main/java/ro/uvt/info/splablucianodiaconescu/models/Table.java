@@ -14,6 +14,7 @@ public class Table implements Element{
     public void setTitle(String title) {
         this.title = title;
     }
+
     @Override
     public void print(){
         System.out.println("Table with Title: " + title);

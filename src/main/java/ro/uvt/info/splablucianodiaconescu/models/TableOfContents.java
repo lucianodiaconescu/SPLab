@@ -7,12 +7,21 @@ public class TableOfContents {
     private List<Paragraph> paragraphList = new ArrayList<>();
     private List<Image> imageList = new ArrayList<>();
     private List<Table> tableList = new ArrayList<>();
+    private List<Element> elementList = new ArrayList<>();
 
     public TableOfContents() {
     }
 
     public List<Paragraph> getParagraphList() {
         return paragraphList;
+    }
+
+    public List<Element> getElementList() {
+        return elementList;
+    }
+
+    public void setElementList(List<Element> elementList) {
+        this.elementList = elementList;
     }
 
     public void setParagraphList(List<Paragraph> paragraphList) {
@@ -54,5 +63,14 @@ public class TableOfContents {
     public void printTable(){
         for (Table table : tableList)
             table.print();
+    }
+    public void add(Element element) {
+        elementList.add(element);
+    }
+
+    public void print() {
+        for (Element element : elementList) {
+            element.print();
+        }
     }
 }

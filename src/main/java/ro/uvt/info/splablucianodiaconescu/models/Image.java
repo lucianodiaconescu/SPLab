@@ -14,6 +14,7 @@ public class Image implements Element{
     public void setImageName(String imageName) {
         this.imageName = imageName;
     }
+
     @Override
     public void print(){
         System.out.println("Image with: " + imageName);
