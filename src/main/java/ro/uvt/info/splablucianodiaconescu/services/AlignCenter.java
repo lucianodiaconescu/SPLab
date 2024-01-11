@@ -1,4 +1,4 @@
-package ro.uvt.info.splablucianodiaconescu.models;
+package ro.uvt.info.splablucianodiaconescu.services;
 
 public class AlignCenter implements AlignStrategy {
     @Override

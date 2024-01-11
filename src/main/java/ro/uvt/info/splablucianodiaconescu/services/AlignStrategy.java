@@ -1,4 +1,4 @@
-package ro.uvt.info.splablucianodiaconescu.models;
+package ro.uvt.info.splablucianodiaconescu.services;
 
 public interface AlignStrategy {
     String render(String text);

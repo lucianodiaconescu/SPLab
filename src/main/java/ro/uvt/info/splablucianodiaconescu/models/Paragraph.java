@@ -1,5 +1,8 @@
 package ro.uvt.info.splablucianodiaconescu.models;
 
+import ro.uvt.info.splablucianodiaconescu.services.AlignLeft;
+import ro.uvt.info.splablucianodiaconescu.services.AlignStrategy;
+
 public class Paragraph implements Element {
     private String text;
     private AlignStrategy alignStrategy;
